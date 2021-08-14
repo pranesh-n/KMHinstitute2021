@@ -10,9 +10,21 @@
 
 {{- partial "dcmetatags.html" . -}}
 
+<link rel="preload" href="css/bs_icons.css" as="style">
+<style>
+    {
+            {
+            - partial "critical.css". -
+        }
+    }
+</style>
+
 
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
 
+<link rel="preload" href="{{ $style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="{{ $style.RelPermalink }}" href="styles.css">
+</noscript>
 {{- partial "ga-tag.html" . -}}

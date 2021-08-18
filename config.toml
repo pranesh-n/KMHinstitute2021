@@ -10,7 +10,7 @@ BaseURL = "https://kmhinstitute.com"
 
   [params]
     author = "Zigma Marketing"
-    description = "Dr. Kamakshi Institute of Medical Science and Research"
+    description = "The Dr. Kamakshi Institute of Medical Sciences & Research (KIMSR) was established in the year 2010 by Dr.T.G.Govindarajan with a vision of generating required human resources for the healthcare industry. It is a unique academic institution that is committed to academic excellence. The institute is an additional facility of Dr. Kamakshi Memorial Hospital Pvt. Ltd., founded in 2005, with a vision “to serve and deliver every patient with the ultimate excellence and devotion, as we care for our loved ones”. The hospital is a 300 bedded Multi Super Specialty hospital at Pallikaranai, situated in the southern part of Chennai, spread over 60 ground land and 75000 square ft building area."
     linkedinurl  = ""
     facebookurl  = "https://www.facebook.com/kmhinstitute"
     telephone = "+919344674515"
@@ -24,8 +24,8 @@ BaseURL = "https://kmhinstitute.com"
   
   [module]
     [[module.mounts]]
-      source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-      target = "assets/js/bootstrap.bundle.min.js"
+      source = "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+      target = "assets/js/bootstrap.bundle.js"
 
   [frontmatter]
     date = ["date", "publishDate", "lastmod"]

@@ -9,11 +9,11 @@
     {{ if .HasChildren }}
     <li class="nav-item dropdown">
         <a class='nav-link dropdown-toggle  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active text-white {{ end }}'
-            href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            href="#" id="{{.Weight}}MenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ .Title }}
         </a>
 
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <ul class="dropdown-menu" aria-labelledby="{{.Weight}}MenuLink">
             {{ range .Children }}
             <li>
                 <a class='dropdown-item  {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active text-white {{ end }}'
@@ -26,7 +26,7 @@
     {{ else }}
     <li class="nav-item">
         <a class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active text-white {{ end }}'
-            href="{{ absURL .URL }}">
+            href="{{ .URL }}">
             {{ .Title }}
         </a>
     </li>

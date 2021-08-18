@@ -33,5 +33,4 @@
     {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
     {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
-    <link rel="stylesheet" href="css/bs_icons.css" media="screen">
 </footer>

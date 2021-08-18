@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </noscript>
 
+<link rel="preload" href="css/bs_icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="css/bs_icons.css">
+</noscript>
+
 {{- partial "ga-tag.html" . -}}
 
 <link rel="preload" as="image" href="{{ .Site.Params.logo }}">
